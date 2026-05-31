@@ -11,26 +11,24 @@ import Booklist from './components/BookList.jsx'
 const appRouter = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
-  },
-  {
-    path: "/home",
-    element: <Home />
-
-  },
-  {
-    path: "/about",
-    element: <About />
-  },
-
-  {
-    path:"/contact",
-    element:<Contact/>
-
+    element: <App />,
+    children: [
+      {
+        path: "/home",
+        element: <Home/>
+      },
+      
+      {
+        path: "/about",
+        element: <About />
+      },
+      {
+        path: "/contact",
+        element: <Contact />
+      }
+    ]
   }
-])
-
-
+]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
