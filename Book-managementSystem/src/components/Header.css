@@ -1,0 +1,20 @@
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    border:none;
+    padding: 20px;
+}
+
+li{
+    list-style-type: none;
+    margin:10px;
+
+}
+body {
+  margin: 0;
+  padding: 0;
+}
