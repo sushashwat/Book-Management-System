@@ -1,0 +1,18 @@
+.container{
+    width: 200px;
+    height: 400px;
+    margin-left: 20px;
+    border: 1px solid black;
+}
+
+.btn{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.btnn{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
