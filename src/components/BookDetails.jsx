@@ -1,9 +1,21 @@
 import { useParams } from "react-router-dom";
 import { Books } from "../assets/utils/Mockdata";
+
+import { useDispatch } from "react-redux";
+import { addItem, removeItem } from "../assets/utils/cartSlice";
+
 function BookDetails() {
     const id = useParams();
     const books = Books.filter(book => book.id == id.id)
     console.log(id);
+    const dispatch = useDispatch();
+
+    function handleAddBook(item){
+        dispatch(addItem(item));
+    }
+    function handleRemoveItem(){
+         dispatch(removeItem());
+    }
 
 
     return (
@@ -23,6 +35,8 @@ function BookDetails() {
                     />
 
                     <h2>{book.price}</h2>
+                    <button onClick={()=> handleAddBook(books)}>Add to Cart</button>
+                    <button onClick={handleRemoveItem}> Remove Item from cart</button>
                 </div>
             ))}
         </>
