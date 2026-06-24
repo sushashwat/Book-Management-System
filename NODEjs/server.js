@@ -1,7 +1,9 @@
 import express from "express";
 import mongoose, { connect } from "mongoose";
-
+import { routes } from "./routes/booksRoutes.js";
 const app = express();
+
+app.use(express.json());
 
 app.listen(3000, ()=>{
     console.log("Server is running on port 3000");
@@ -19,31 +21,9 @@ db.on("open", ()=>{
 db.on("error", ()=>{
     console.log("connection is not successful");
     
-})
-
-
-app.post("/books",(req,res)=>{
-    const{ id,
-    title,
-    author,
-    genre,
-    price,
-    publishedYear,
-    available,
-    image } = req.body;
-
-    const newBook = {
-      id: id,
-      title: title,
-      author: author,
-      genre: genre,
-      price: price,
-      publishedYear: publishedYear,
-      available: available,
-      image: image
-    };
-
-    books.push(newBook);
-    res.send(books);
-
 });
+
+routes(app);
+
+
+

@@ -1,4 +1,4 @@
-import bookModel from "../model/books.model";
+import bookModel from "../model/books.model.js";
 export function createBook(req,res){
     const{title,author,coverImage, description} = req.body
 
