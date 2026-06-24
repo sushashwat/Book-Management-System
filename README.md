@@ -48,3 +48,9 @@ src/
 ## 👨‍💻 Author
 
 Shashwat Gupta
+
+
+# Lazy Loading 
+# Chunking 
+# On demand loading 
+# Code Splitting 
